@@ -1,0 +1,12 @@
+.input-bar {
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    outline: 1px solid transparent;
+    border: 1px solid gray;
+
+    &:focus {
+        border: 1px solid green;
+        box-shadow: rgba(100, 111, 101, 0.2) 0px 7px 29px 0px;
+    }
+}
