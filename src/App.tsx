@@ -4,6 +4,8 @@ import TaskList from './containers/TaskList/TaskList';
 import RefreshContextProvider from './context/RefreshContextProvider';
 import NewTaskForm from './components/NewTaskForm/NewTaskForm';
 import SearchBar from './components/SearchBar/SearchBar';
+import { faList } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
   const [adding, setAdding] = useState(false);
@@ -18,7 +20,9 @@ function App() {
   return (
     <RefreshContextProvider>
       <div className='page-title'>
-        <h1>TODOs</h1>
+        <h1>
+          listlink <FontAwesomeIcon icon={faList} />
+        </h1>
       </div>
       <div className='page-wrapper'>
         <div className='inputs'>

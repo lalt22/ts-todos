@@ -9,18 +9,27 @@
   justify-content: flex-start;
 }
 
+h1 {
+    font-family: "Bentham", serif;
+    font-weight: 400;
+    font-size: 60px;
+    font-style: normal;
+}
+
 .page-title {
   position: sticky;
   width: 100%;
   margin-top: 10px;
   height: fit-content;
+  background-color: #ebdcf7;
 }
 
 .page-wrapper {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-
+  background-color: #ebdcf7;
+  height: 100%;
 }
 
 .adding {
