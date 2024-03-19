@@ -8,7 +8,13 @@ import { useContext, useEffect, useState } from 'react';
 import './TaskCard.scss';
 import { RefreshContext } from '../../context/RefreshContextProvider';
 import NewTaskForm from '../NewTaskForm/NewTaskForm';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCancel,
+  faCheck,
+  faPen,
+  faTrash,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface TaskCardProps {
   task: Task;
@@ -77,9 +83,15 @@ const TaskCard = ({ task }: TaskCardProps) => {
       </div>
 
       <div className='options'>
-        <button onClick={handleDelete}>Delete</button>
+        <FontAwesomeIcon
+          icon={faTrash}
+          onClick={handleDelete}
+        ></FontAwesomeIcon>
         {!propData.completed && (
-          <button onClick={handleEdit}>{editingText}</button>
+          <FontAwesomeIcon
+            icon={editing ? faCancel : faPen}
+            onClick={handleEdit}
+          ></FontAwesomeIcon>
         )}
       </div>
     </div>

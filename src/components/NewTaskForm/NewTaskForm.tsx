@@ -13,6 +13,7 @@ import {
   getTaskById,
   updateTaskById,
 } from '../../services/taskServices';
+import './NewTaskForm.scss';
 
 interface formData {
   setAdding: Dispatch<SetStateAction<boolean>>;

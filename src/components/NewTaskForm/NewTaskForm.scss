@@ -1,11 +1,14 @@
+form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .new-form {
     & .inputs {
-        margin-top: 10px;
-        display: flex;
-        flex-flow: column wrap;
-        width: 50%;
+        display: flex !important;
+        align-items: center;
         gap: 10px;
-
+        height: 100%;
 
         & input {
             height: 30px;
@@ -34,11 +37,17 @@
     &.left-aligned {
         align-self: flex-start;
         height: 100%;
+        width: 100%;
         justify-content: space-around;
     }
 
     &.centered {
         align-self: center;
         height: fit-content;
+        width: 80%;
+
+        & .inputs {
+            margin-top: 10px;
+        }
     }
 }
