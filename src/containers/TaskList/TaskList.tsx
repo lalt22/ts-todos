@@ -4,7 +4,6 @@ import {
   Task,
   getAllTasks,
   getTasksByDescription,
-  orderByCompleted,
 } from '../../services/taskServices';
 import { RefreshContext } from '../../context/RefreshContextProvider';
 import './TaskList.scss';
@@ -15,7 +14,7 @@ export interface TaskListProps {
 
 const TaskList = ({ searchParam }: TaskListProps) => {
   const [tasks, setTasks] = useState<Task[] | null>(null);
-  const { refresh, setRefresh } = useContext(RefreshContext);
+  const { refresh } = useContext(RefreshContext);
 
   useEffect(() => {
     if (!searchParam) {
@@ -24,14 +23,6 @@ const TaskList = ({ searchParam }: TaskListProps) => {
       getTasksByDescription(searchParam).then((data) => setTasks(data));
     }
   }, [refresh, searchParam]);
-
-  useEffect(() => {
-    // console.log("Refresh: " + refresh);
-  }, [refresh]);
-
-  useEffect(() => {
-    // setRefresh(refresh + 1);
-  }, [tasks]);
 
   return (
     <div className='task-list'>

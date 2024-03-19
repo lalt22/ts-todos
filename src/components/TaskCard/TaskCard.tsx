@@ -8,12 +8,7 @@ import { useContext, useEffect, useState } from 'react';
 import './TaskCard.scss';
 import { RefreshContext } from '../../context/RefreshContextProvider';
 import NewTaskForm from '../NewTaskForm/NewTaskForm';
-import {
-  faCancel,
-  faCheck,
-  faPen,
-  faTrash,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCancel, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface TaskCardProps {
@@ -50,8 +45,6 @@ const TaskCard = ({ task }: TaskCardProps) => {
   }, [propData]);
 
   const completeButtonStyle = propData.completed ? 'checked' : 'unchecked';
-  const editingText = editing ? 'Cancel' : 'Edit';
-  const buttonIcons = propData.completed ? '' : faCheck;
 
   return (
     <div

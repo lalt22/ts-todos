@@ -1,32 +1,27 @@
-import {
-  getByPlaceholderText,
-  getByRole,
-  render,
-  screen,
-} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderer, { act } from 'react-test-renderer';
+import { act } from 'react-test-renderer';
 
 import App from './App';
 import 'vitest';
 import { expect } from 'vitest';
 // import { describe, it } from 'vitest';
 
-const task1 = {
-  id: 1,
-  description: 'hello',
-  completed: false,
-  createdDate: new Date('2024-03-08T01:16:30.000Z'),
-  dueDate: new Date('2024-03-08T01:16:30.000Z'),
-};
+// const task1 = {
+//   id: 1,
+//   description: 'hello',
+//   completed: false,
+//   createdDate: new Date('2024-03-08T01:16:30.000Z'),
+//   dueDate: new Date('2024-03-08T01:16:30.000Z'),
+// };
 
-const task2 = {
-  id: 2,
-  description: 'there',
-  completed: false,
-  createdDate: new Date('2024-03-08T01:17:30.000Z'),
-  dueDate: new Date('2024-03-09T01:16:30.000Z'),
-};
+// const task2 = {
+//   id: 2,
+//   description: 'there',
+//   completed: false,
+//   createdDate: new Date('2024-03-08T01:17:30.000Z'),
+//   dueDate: new Date('2024-03-09T01:16:30.000Z'),
+// };
 
 describe('Setup Tests', () => {
   it('tests true', () => {

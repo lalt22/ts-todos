@@ -19,9 +19,11 @@ h1 {
 .page-title {
   position: sticky;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 50px;
   height: fit-content;
   background-color: #ebdcf7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .page-wrapper {
@@ -30,6 +32,9 @@ h1 {
   justify-content: flex-start;
   background-color: #ebdcf7;
   height: 100%;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .adding {

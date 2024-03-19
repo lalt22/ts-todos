@@ -24,11 +24,7 @@ interface formData {
 const NewTaskForm = ({ setAdding, makeNew, id }: formData) => {
   const { refresh, setRefresh } = useContext(RefreshContext);
   const [taskToEdit, setTaskToEdit] = useState<Task | null>(null);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data: any) => {
     if (makeNew) {
